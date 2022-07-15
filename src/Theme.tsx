@@ -1,20 +1,12 @@
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme, ThemeProvider } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
-import { PropsWithChildren, useMemo } from "react";
+import { PropsWithChildren, useContext, useMemo } from "react";
+import { Global } from "./Global";
 
 const Theme = ({ children }: PropsWithChildren) => {
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const { mode } = useContext(Global);
 
-  const theme = useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode: prefersDarkMode ? "dark" : "light",
-        },
-      }),
-    [prefersDarkMode]
-  );
+  const theme = useMemo(() => createTheme({ palette: { mode } }), [mode]);
 
   return (
     <ThemeProvider theme={theme}>
