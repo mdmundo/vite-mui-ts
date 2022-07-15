@@ -3,11 +3,9 @@ import { PropsWithChildren } from "react";
 
 const Basic = ({ children }: PropsWithChildren) => {
   return (
-    <Container maxWidth="sm" sx={{ py: 2 }}>
-      <Paper elevation={24} sx={{ p: 2 }}>
-        {children}
-      </Paper>
-    </Container>
+    <Paper elevation={24} sx={{ p: 2, my: 3 }}>
+      {children}
+    </Paper>
   );
 };
 
