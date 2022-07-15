@@ -2,6 +2,7 @@ import { Container } from "@mui/material";
 import Basic from "./Basic";
 import Counter from "./Counter";
 import Secret from "./Secret";
+import Toggle from "./Toggle";
 import Typing from "./Typing";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Basic children={<Counter />} />
       <Basic children={<Secret />} />
       <Basic children={<Typing />} />
+      <Basic children={<Toggle />} />
     </Container>
   );
 }
