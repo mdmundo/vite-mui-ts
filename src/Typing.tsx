@@ -1,7 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 
 const Typing = () => (
-  <Stack direction="column" justifyContent="flex-start" alignItems="stretch" spacing={1}>
+  <Stack direction="column" justifyContent="flex-start" alignItems="stretch" spacing={1.5}>
     <Typography variant="h4" align="center" children="Ut vero duis" />
     <Typography
       variant="subtitle2"
