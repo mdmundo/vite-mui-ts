@@ -12,9 +12,7 @@ function App() {
       <CssBaseline />
       <Basic children={<Counter />} />
       <Basic children={<Secret />} />
-      <Basic>
-        <Typing />
-      </Basic>
+      <Basic children={<Typing />} />
     </ThemeProvider>
   );
 }
